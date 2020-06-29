@@ -10,7 +10,7 @@ To know more about my skills and experience, check out [mayank-vadsola.com](http
 - ### Machine Learning
 
 	[Lending Money with Spark](https://www.google.com): Cleaning the lending club data and feature engineering using Apache Spark. Building models with SparkML to predict loan condition. 
-	_Tools: PySpark, SparkML, Amazon S3, SQL_
+	_Tools: PySpark, SparkML, Amazon S3, SQL, Seaborn, Matplotlib_
 	<!--- [Supervised Learning: Finding Donors for CharityML](https://github.com/sajal2692/data-science-portfolio/blob/master/finding_donors/finding_donors.ipynb): Testing out several different supervised learning algorithms to build a model that accurately predicts whether an individual makes more than $50,000, to identify likely donors for a fictional non-profit organisation.
 	- [Unsupervised Learning: Creating Customer Segments](https://github.com/sajal2692/data-science-portfolio/blob/master/customer_segments/customer_segments.ipynb): Analyzing a dataset containing data on various customers' annual spending amounts (reported in monetary units) of diverse product categories for discovering internal structure, patterns and knowledge.
 	- [Reinforcement Learning: Training a Smartcab to Drive](https://github.com/sajal2692/Training-a-Smartcab-to-Drive): Creating an optimized Q-Learning driving agent that will navigate a Smartcab through its environment towards a goal.
