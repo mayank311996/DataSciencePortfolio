@@ -1,13 +1,13 @@
 # Lending Money Spark 
-<!--
+
 ## Table of Content
-  * [Demo](#demo)
+  <!--* [Demo](#demo)-->
   * [Overview](#overview)
   * [Motivation](#motivation)
   * [Technical Aspect](#technical-aspect)
   * [Installation](#installation)
-  * [Run](#run)
-  * [Deployement on Heroku](#deployement-on-heroku)
+  <!--* [Run](#run)-->
+  <!--* [Deployement on Heroku](#deployement-on-heroku)-->
   * [Directory Tree](#directory-tree)
   * [To Do](#to-do)
   * [Bug / Feature Request](#bug---feature-request)
@@ -16,18 +16,19 @@
   * [License](#license)
   * [Credits](#credits)
 
-
+<!--
 ## Demo
 Link: [https://indian-currency-prediction.herokuapp.com](https://indian-currency-prediction.herokuapp.com/)
 
 [![](https://i.imgur.com/5gj4USj.png)](https://indian-currency-prediction.herokuapp.com/)
-
+-->
 ## Overview
-This is a simple image classification Flask app trained on the top of Keras API. The trained model (`app/model/model.h5`) takes an image (Indian Paper Currency) as an input and predict the class of image from __10, 20, 50, 100, 200, 500, 2000__ denomination.
+This projet presents cleaning and feature engineering of lending club data that has over 140 columns and 2 million rows using Spark and building ML models using SparkML for the same. The data can be found [here](https://www.kaggle.com/wendykan/lending-club-loan-data). 
 
 ## Motivation
-What could be a perfect way to utilize unfortunate lockdown period? Like most of you, I spend my time in cooking, Netflix, coding and reading some latest research papers on weekends. The idea of classifying indian currency struck to me when I was browsing through some research papers. I couldn't find any relevant research paper (and of course dataset!) associated with it. And that led me to collect the images of Indian currency to train a deep learning model using [this](https://github.com/hardikvasa/google-images-download) amazing tool.
+Best way to utilize the lockdown period is to enhance your portfolio. The aim behind this project was to present importance of Apache Spark in real world cenario. Often, people use pandas and other libraries to do data anlysis that uses single CPU and can't scale. This is not possible in industries when you are dealing with large amount of data like in tera bites or peta bites, you need something that can scale seamlessly. 
 
+<!--
 ## Technical Aspect
 This project is divided into two part:
 1. Training a deep learning model using Keras. (_Not covered in this repo. I'll update the link here once I make it public._)
@@ -37,13 +38,13 @@ This project is divided into two part:
     - Used __CSRF Token__ to protect against CSRF attacks.
     - Used __Sentry__ to catch the exception on the back-end.
     - After uploading the image, the predictions are displayed on a __Bar Chart__.
-
+-->
 ## Installation
 The Code is written in Python 3.7. If you don't have Python installed you can find it [here](https://www.python.org/downloads/). If you are using a lower version of Python you can upgrade using the pip package, ensuring you have the latest version of pip. To install the required packages and libraries, run this command in the project directory after [cloning](https://www.howtogeek.com/451360/how-to-clone-a-github-repository/) the repository:
 ```bash
 pip install -r requirements.txt
 ```
-
+<!--
 ## Run
 > STEP 1
 #### Linux and macOS User
@@ -83,22 +84,14 @@ Our next step would be to follow the instruction given on [Heroku Documentation]
 
 ## Directory Tree 
 ```
-|+-- app 
-│   ├── __init__.py
-│   ├── main.py
-│   ├── model
-│   ├── static
-│   └── templates
-├── config
-│   ├── __init__.py
-├── processing
-│   ├── __init__.py
-├── requirements.txt
-├── runtime.txt
-├── LICENSE
-├── Procfile
-├── README.md
-└── wsgi.py
+|+-- src 
+│   |+-- 
+|+-- notebooks
+│   |+-- Lending_Money_Spark.ipynb
+|+-- requirements.txt
+|+-- LICENSE
+|+-- README.md
+
 ```
 <!--
 ## To Do
