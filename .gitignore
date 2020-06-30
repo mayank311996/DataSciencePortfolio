@@ -132,6 +132,8 @@ dmypy.json
 # input data and models
 input/
 models/
+Lending-Money-Spark/notebooks/spark-warehouse/
+
 
 
 # data files
