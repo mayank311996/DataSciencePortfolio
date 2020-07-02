@@ -5,6 +5,7 @@
   * [Motivation](#motivation)
   * [Technical Aspect](#technical-aspect)
   * [Installation](#installation)
+  * [Run](#run)
   * [Directory Tree](#directory-tree)
   * [To Do](#to-do)
   * [Bug / Feature Request](#bug---feature-request)
@@ -19,7 +20,9 @@ Link: [https://indian-currency-prediction.herokuapp.com](https://indian-currency
 [![](https://i.imgur.com/5gj4USj.png)](https://indian-currency-prediction.herokuapp.com/)
 -->
 ## Overview
-This project explains how to build a customer reviews sentiment analysis model using TensorFlow and deployment on Google CLoud Platform. The data can be found [here](https://www.kaggle.com/wendykan/lending-club-loan-data). 
+This project explains how to build a customer reviews sentiment analysis model using TensorFlow and deployment on Google CLoud Platform. The data can be found [here](https://www.google.com). 
+
+_Note: Some familiarity with GCP is assumed._ 
 
 ## Motivation
 The aim behind this project was to present end-to-end model deployement in real world cenario. It is crucial to know how we can deploy our trained model on a cloud platform like GCP that can be scalable according to real world internet traffic. 
@@ -39,30 +42,112 @@ The Code is written in Python 3.7. If you don't have Python installed you can fi
 ```bash
 pip install -r requirements.txt
 ```
-<!--
+
 ## Run
 > STEP 1
-#### Linux and macOS User
-Open `.bashrc` or `.zshrc` file and add the following credentials:
-```bash
-export AWS_ACCESS_KEY="your_aws_access_key"
-export AWS_SECRET_KEY="your_aws_secret_key"
-export ICP_BUCKET='your_aws_bucket_name'
-export ICP_BUCKET_REGION='bucket_region'
-export ICP_UPLOAD_DIR='bucket_path_to_save_images'
-export ICP_PRED_DIR='bucket_path_to_save_predictions'
-export ICP_FLASK_SECRET_KEY='anything_random_but_unique'
-export SENTRY_INIT='URL_given_by_sentry'
+#### Uploading Files to Google Cloud Storage
+
+Upload all files in `/src` directory along with [trained model](https://www.google.com) and [vocabulary](https://www.google.com) to Google Cloud Storage Bucket.
+
+In my case bucket is located at `gs://mayank-sentimentflaskapp/`. 
+
+> STEP 2
+#### Getting Files into Current Cloud Shell
+
+Open the Cloud Shell and type following commands.
 ```
-Note: __SENTRY_INIT__ is optional, only if you want to catch exceptions in the app, else comment/remove the dependencies and code associated with sentry in `app/main.py`
+ls 
+gsutil ls
+gsutil ls gs://mayank-sentimentflaskapp/
+gsutil cp -r gs://mayank-sentimentflaskapp/ .
+ls
+```
 
-#### Windows User
-Since, I don't have a system with Windows OS, here I collected some helpful resource on adding User Environment Variables in Windows.
+> STEP 3
+#### Creating Docker Container
 
-__Attention__: Please perform the steps given in these tutorials at your own risk. Please don't mess up with the System Variables. It can potentially damage your PC. __You should know what you're doing__. 
-- https://www.tenforums.com/tutorials/121855-edit-user-system-environment-variables-windows.html
-- https://www.onmsft.com/how-to/how-to-set-an-environment-variable-in-windows-10
+In Cloud Shell type following commands.
+```
+cat .dockerignore
+gcloud config get-value project 
+gcloud builds submit --tag gcr.io/mayank-project/sentimentflaskapp-gke .
+```
 
+> STEP 4
+#### Creating Kubernetes Engine
+
+In Cloud Shell type following commands.
+```
+gcloud container clusters create flaskapp-gke \
+--num-nodes 1 \
+--enable-basic-auth \
+--issue-client-certificate \
+--zone us-west1-b \
+--scopes https://www.googleapis.com/auth/logging.write
+```
+
+> STEP 5
+#### Applying Both YAML Files to Running Kubernetes Cluster
+
+In Cloud Shell type following commands.
+```
+ls -alrt
+kubectl apply -f deployment.yaml
+kubectl get deployments 
+kubectl get pods 
+
+ls -alrt
+kubectl apply -f service.yaml
+kubectl get services
+```
+
+> STEP 6
+#### Testing Deployed App
+
+In Cloud Shell type following commands. (see `/src/examples.txt`)
+```
+curl 11.111.111.111/hcheck
+
+
+curl 11.111.111.111/seclassifier -d '{"text":"""Still working my way through it but definitely changes your view on investment. Wish it was available on Audible"""}' -H "Content-Type: application/json" 
+```
+
+> STEP 7
+#### Scaling Deployed Kubernetes Cluster
+
+In Cloud Shell type following commands.
+```
+kubectl get deployment
+gcloud container clusters resize flaskapp-gke --num-nodes 2 --zone us-west1-b
+
+kubectl autoscale deployment flaskapp-gke --max 6 --min 3 --cpu-percent 50 
+
+kubectl get deployment
+kubectl get pod 
+kubectl get hpa 
+```
+
+> STEP 8 
+#### Deploying on Google Cloud Cloud Run (Serverless)
+
+In Cloud Shell type following commands.
+```
+gcloud config set project mayank-project
+
+gcloud run deploy sentimentflaskapp --image gcr.io/mayank-project/sentimentflaskapp-gke --platform managed --memory 1G
+```
+
+> STEP 9 
+#### Testing Deployed Serverless Cluster
+
+In Cloud Shell type following commands.
+```
+curl https://xyz.xyz.xyz.xyz/hcheck 
+
+curl https://xyz.xyz.xyz.xyz/seclassifier -d '{"text":"""Still working my way through it but definitely changes your view on investment. Wish it was available on Audible"""}' -H "Content-Type: application/json" 
+```
+
+<!--
 > STEP 2
 
 To run the app in a local machine, shoot this command in the project directory:
