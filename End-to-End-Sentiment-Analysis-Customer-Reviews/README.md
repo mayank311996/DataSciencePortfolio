@@ -140,7 +140,7 @@ gcloud run deploy sentimentflaskapp --image gcr.io/mayank-project/sentimentflask
 > STEP 9 
 #### Testing Deployed Serverless Cluster
 
-In Cloud Shell type following commands.
+In Cloud Shell type following commands. (see `/src/examples.txt`)
 ```
 curl https://xyz.xyz.xyz.xyz/hcheck 
 
@@ -166,7 +166,7 @@ Our next step would be to follow the instruction given on [Heroku Documentation]
 ```
 |+-- src 
 │   |+-- SentimentFlaskapp.py
-|   |+-- scratch.txt
+|   |+-- examples.txt
 |   |+-- SentimentGunicorn.py
 |   |+-- Dockerfile
 |   |+-- .dockerignore
