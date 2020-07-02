@@ -193,7 +193,7 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 
 ![](https://forthebadge.com/images/badges/made-with-python.svg)
 
-[<img target="_blank" src="https://prnewswire2-a.akamaihd.net/p/1893751/sp/189375100/thumbnail/entry_id/0_7ljmtw18/def_height/1920/def_width/1920/version/100012/type/1" width=200>](https://cloud.google.com/) [<img target="_blank" src="https://www.kindpng.com/picc/b/301/3012484.png" width=200>](https://aws.amazon.com/s3/) 
+[<img target="_blank" src="https://prnewswire2-a.akamaihd.net/p/1893751/sp/189375100/thumbnail/entry_id/0_7ljmtw18/def_height/1920/def_width/1920/version/100012/type/1" width=200>](https://cloud.google.com/) [<img target="_blank" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Google-Cloud-Storage-Logo.svg/1024px-Google-Cloud-Storage-Logo.svg.png" width=200>](https://cloud.google.com/storage) [<img target="_blank" src="https://devopedia.org/images/article/132/8347.1543060432.svg" width=200>](https://cloud.google.com/kubernetes-engine) [<img target="_blank" src="https://miro.medium.com/max/562/1*gYGvyOHloJ2JKO8MX3fYAw.png" width=200>](https://cloud.google.com/run)    
 
 
 <!--
