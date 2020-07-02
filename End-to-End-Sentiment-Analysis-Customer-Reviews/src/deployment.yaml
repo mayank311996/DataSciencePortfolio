@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: flaskapp-gke
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: sentimentclassifier
+    template:
+        metadata:
+            labels:
+                app: sentimentclassifier
+        spec: 
+            containers:
+            - name: sentimentflaskapp
+              image: gcr.io/mayank-project/sentimentflaskapp-gke
+              ports:
+              - containerPort: 8080
+              env: 
+               - name: PORT
+                 value: "8080"
