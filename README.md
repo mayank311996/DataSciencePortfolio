@@ -9,7 +9,7 @@ To know more about my skills and experience, check out [mayank-vadsola.com](http
 
 - ### Machine Learning
 
-	[Lending Money with Spark](https://www.google.com): Cleaning the lending club data and feature engineering using Apache Spark. Building models with SparkML to predict loan condition.
+	[Lending Money with Spark](https://github.com/mayank311996/DataSciencePortfolio/tree/master/Lending-Money-Spark): Cleaning the lending club data and feature engineering using Apache Spark. Building models with SparkML to predict loan condition.
 	 
 	_Tools: PySpark, SparkML, Amazon S3, SQL, Seaborn, Matplotlib_
 	<!--- [Supervised Learning: Finding Donors for CharityML](https://github.com/sajal2692/data-science-portfolio/blob/master/finding_donors/finding_donors.ipynb): Testing out several different supervised learning algorithms to build a model that accurately predicts whether an individual makes more than $50,000, to identify likely donors for a fictional non-profit organisation.
@@ -21,7 +21,7 @@ To know more about my skills and experience, check out [mayank-vadsola.com](http
 
 - ### Natural Language Processing
 
-	[End-to-End Sentiment Analysis for Customer Reviews](https://www.google.com): Building Amazon customer reviews sentiment analysis model. Containerizing and deploying trained model using Google Cloud Kubernetes engine and Google Cloud Serverless Cloud Run as a Flask application.
+	[End-to-End Sentiment Analysis for Customer Reviews](https://github.com/mayank311996/DataSciencePortfolio/tree/master/End-to-End-Sentiment-Analysis-Customer-Reviews): Building Amazon customer reviews sentiment analysis model. Containerizing and deploying trained model using Google Cloud Kubernetes engine and Google Cloud Serverless Cloud Run as a Flask application.
 
 	_Tools: TensorFlow, Google Cloud Storage, Google Cloud Kubernetes Engine, Google Cloud Serverless Cloud Run, Container Registry, Flask, Gunicorn, Matplotlib_  
 	<!--
