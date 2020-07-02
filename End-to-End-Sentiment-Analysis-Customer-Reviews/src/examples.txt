@@ -1,0 +1,11 @@
+
+curl 11.111.111.111/hcheck
+
+curl 11.111.111.111/seclassifier -d '{"text":"""Still working my way through it but definitely 
+changes your view on investment. Wish it was available on Audible"""}' -H "Content-Type: application/json" 
+
+
+curl https://xyz.xyz.xyz.xyz/hcheck 
+
+curl https://xyz.xyz.xyz.xyz/seclassifier -d '{"text":"""Still working my way through it but 
+definitely changes your view on investment. Wish it was available on Audible"""}' -H "Content-Type: application/json" 
