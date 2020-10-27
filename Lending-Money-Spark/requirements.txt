@@ -51,7 +51,7 @@ confuse==1.1.0
 contextlib2==0.6.0
 convertdate==2.2.0
 CoolProp==6.3.0
-cryptography==2.7
+cryptography==3.2
 cycler==0.10.0
 cymem==2.0.3
 Cython==0.29.13
