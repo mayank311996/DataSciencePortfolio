@@ -30,7 +30,7 @@ numpy==1.17.2
 numpydoc==0.9.1
 pandas==0.25.3
 pickleshare==0.7.5
-Pillow==6.2.0
+Pillow==9.0.0
 scikit-image==0.15.0
 scikit-learn==0.22.1
 scipy==1.4.1
