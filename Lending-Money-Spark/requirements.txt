@@ -212,7 +212,7 @@ pycurl==7.43.0.3
 pydeck==0.2.0
 pyflakes==2.1.1
 Pygments==2.4.2
-PyJWT==1.7.1
+PyJWT==2.4.0
 pylint==2.4.2
 PyMeeus==0.3.7
 pyodbc==4.0.27
