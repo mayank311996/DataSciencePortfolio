@@ -138,7 +138,7 @@ lightgbm==2.3.1
 llvmlite==0.29.0
 locket==0.2.0
 LunarCalendar==0.0.9
-lxml==4.4.1
+lxml==4.9.1
 Markdown==3.1.1
 MarkupSafe==1.1.1
 matplotlib==3.2.1
