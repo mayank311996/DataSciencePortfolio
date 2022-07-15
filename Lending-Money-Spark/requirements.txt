@@ -61,7 +61,7 @@ dask-xgboost==0.1.10
 decorator==4.4.0
 defusedxml==0.6.0
 detecto==1.1.2
-distributed==2.5.2
+distributed==2021.10.0
 docutils==0.15.2
 efficientnet==1.1.0
 en-core-web-md==2.2.5
