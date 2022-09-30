@@ -111,7 +111,7 @@ jedi==0.15.1
 jeepney==0.4.1
 Jinja2==2.11.2
 jmespath==0.9.4
-joblib==0.14.1
+joblib==1.2.0
 json5==0.8.5
 jsonschema==3.0.2
 jupytemplate==0.3.0
