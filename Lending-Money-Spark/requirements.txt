@@ -280,7 +280,7 @@ tables==3.5.2
 tangled-up-in-unicode==0.0.4
 tblib==1.4.0
 tensorboard==2.1.0
-tensorflow==2.1.0
+tensorflow==2.9.3
 tensorflow-estimator==2.1.0
 tensorflow-gpu==1.13.1
 termcolor==1.1.0
